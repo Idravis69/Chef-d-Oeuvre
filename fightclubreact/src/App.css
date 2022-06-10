@@ -1,0 +1,264 @@
+.Navbar {
+  background-color: #3D0303;
+}
+
+.tlogo {
+  color: white;
+  margin: 0;
+  font-size: small;
+}
+
+.back {
+  background-color: #7B0000;
+}
+
+.nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255 255 255);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(255 255 255);
+}
+
+.translate-middle-y {
+  color: white;
+  margin-right: 2%;
+}
+
+.Presentation {
+  background-color: #3D0303;
+  background-image: url(../public/images/fondacceuil.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.titre {
+  color: white;
+  margin-left: 12%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.text {
+  color: white;
+  margin-left: 12%;
+  display: flex;
+  text-align: center;
+}
+
+.gantacceuil {
+  margin-left: 12%;
+  width: 25%;
+  display: flex;
+  text-align: center;
+  animation: bounce 2s infinite;
+}
+
+.pres {
+  width: 30%;
+}
+
+@media screen and (max-width: 550px) {
+
+  .gantacceuil {
+  
+  display: none;
+  
+  }
+  
+  }
+
+.fondippo {
+  width: 100%;
+  background-image: url(../public/images/ippo.png);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 20%;
+  margin-top: 1%;
+}
+
+.Boxer {
+  color: #3D0303;
+  font-size: 20em;
+  display: flex;
+  justify-content: center;
+  transform: rotate(-16deg);
+  font-size:23vw;
+  margin-right: 3%;
+}
+
+.btnippo {
+  background-color: #3D0303;
+  color: white;
+  width: 20%;
+  margin-left: 70%;
+  font-size: 1.5em;
+  border: none;
+  padding: 1%;
+  margin-bottom: 2%;
+  font-size:2vw;
+}
+
+.hr {
+  display: flex;
+  width: 90%;
+  border: 1px solid #3D0303;
+  opacity: 1;
+  margin-left: 5%;
+}
+
+.texteinfo {
+  color: black;
+  margin-left: 5%;
+}
+
+.titreinfo {
+  color: black;
+  font-size: 2em;
+  margin-left: 5%;
+}
+
+.textehoraire {
+  color: black;
+  margin-left: 5%;
+}
+
+.info {
+  width: 50%;
+}
+
+.map {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+
+  .Localisation {
+    display: flex;
+    flex-direction: column;
+  
+  }
+
+  .info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .map {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+  }
+  
+  }
+
+.Localisation {
+  margin-top: 3%;
+}
+
+.txtcontact {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  flex-direction: column;
+}
+
+.form-control {
+  border: solid 2px #3D0303;
+}
+
+.formcontact {
+  justify-content: center;
+  color: black;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.btncontact {
+  background-color: #3D0303;
+  color: white;
+  width: 20%;
+  font-size: 1.5em;
+  border: none;
+  padding: 1%;
+  margin-top: 2%;
+  font-size:2vw;
+  margin-left: 40%;
+}
+
+.Footer {
+  background-color: #3D0303;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: flex-end;
+  width:100%;
+  margin-top: 4%;
+}
+
+.txtfooter {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.uk-link, a:hover {
+  color: #ffffff;
+}
+
+.uk-link, a {
+  color: #ffffff;
+}
+
+.containerconnexion {
+  height: 80vh;
+  margin:50px auto;
+}
+.containerconnexion h1{
+  text-align:center;
+}
+
+.btnconnexion{
+  background-color:#3D0303;
+  color:#fff;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+  margin-top:10px;
+}
+
+h1{
+  text-align:center;
+}
+
+.divtarif {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  flex-direction: column;
+}
+
+.diventrainement {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  flex-direction: column;
+}
+
+.divage {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  flex-direction: column;
+}
