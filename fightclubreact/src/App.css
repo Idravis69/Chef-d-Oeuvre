@@ -202,7 +202,7 @@
   color: white;
   align-items: flex-end;
   width:100%;
-  margin-top: 4%;
+  margin-top: 4%
 }
 
 .txtfooter {
@@ -256,6 +256,116 @@ h1{
 }
 
 .divage {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  flex-direction: column;
+}
+
+
+/**/
+
+
+
+.product-body{
+  padding-top: 5%;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .product-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  }
+}
+
+.left-item{
+  width: 60%;
+  display: block;
+}
+
+.right-item{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title{
+  display: flex;
+}
+
+h1{
+  color: #343434;
+  font-weight: 300;
+  margin: 0px 0px;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+p.desc{
+  font-family: 'Karla', sans-serif;
+  color: #888179;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+strong{
+  color: #3C3B3B;
+}
+
+
+/**/
+
+.titretarifs {
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.prixtarifs {
+  font-weight: 800;
+  display: inline-block;
+  background-color: #fff;
+  position: relative;
+  margin-left: 5%;
+}
+
+.list-prix {
+  list-style: none;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+li.des {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+  margin-right: 2% ;
+}
+
+li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tarifs{
   display: flex;
   justify-content: center;
   text-align: center;

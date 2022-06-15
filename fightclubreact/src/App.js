@@ -7,6 +7,10 @@ import Navlink from './components/Navlink';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Tarifs from './components/Tarifs';
+import Boutique from './components/Boutique';
+import Create from './components/create';
+import Edit from './components/edit';
+import View from './components/view';
 
 
 function App() {
@@ -15,9 +19,13 @@ function App() {
       <Navbar/>
       <Navlink/>
       <Routes>
-        <Route path="/" element={<Acceuil/>} />
+        <Route path="/Acceuil" element={<Acceuil/>} />
         <Route path="/Connexion" element={<Connexion/>} />
         <Route path="/Tarifs" element={<Tarifs/>} />
+        <Route path='/Boutique' element={<Boutique />} />
+        <Route path='/create' element={<Create />} />
+        <Route path='/edit/:id' element={<Edit />} />
+        <Route path='/view/:id' element={<View />} />
       </Routes>
       <Footer/>
     </div>

@@ -1,7 +1,7 @@
 function Contact() {
 
     return (
-        <div className="Contact">
+        <div id="formc" className="Contact">
             <hr className="hr mt-5" />
             <div className="txtcontact">
                 <p>Nom Prénom <br /> Responsable Club <br /> 0632543508</p>
