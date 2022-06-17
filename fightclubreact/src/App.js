@@ -11,6 +11,7 @@ import Boutique from './components/Boutique';
 import Create from './components/create';
 import Edit from './components/edit';
 import View from './components/view';
+import Inscription from './components/Inscription';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/create' element={<Create />} />
         <Route path='/edit/:id' element={<Edit />} />
         <Route path='/view/:id' element={<View />} />
+        <Route path='/Inscription' element={<Inscription />} />
       </Routes>
       <Footer/>
     </div>

@@ -1,7 +1,7 @@
 function Tarifs() {
     return (
         <div className="tarifs">
-            <h3> Tarifs Licences</h3>
+            <h3> Tarifs </h3>
             <ul class='list-prixtarifs'>
                 <li>
                     <span class='titretarifs'> <span class="strong">7 ans / 10 ans</span>

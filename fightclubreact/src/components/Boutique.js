@@ -41,11 +41,11 @@ export default function Boutique() {
                                 <div className='d-flex mt-1 '>
                                 </div>
                                 <p className='mt-1'>{user.Prix}</p>
-                                <Link className="btn btn-info" to={{ pathname: "/edit/" + user.id }}>Edit</Link>&nbsp;
-                                <Link className="btn btn-primary" to={{ pathname: "/view/" + user.id }}>View</Link>&nbsp;
+                                <Link className="btn btn-info" to={{ pathname: "/edit/" + user.id }}>Modifier</Link>&nbsp;
+                                <Link className="btn btn-primary" to={{ pathname: "/view/" + user.id }}>Voir</Link>&nbsp;
                                 <button type="button" className="btn btn-danger"
                                     onClick={() => { deleteUser(user.id) }}
-                                >Delete</button>
+                                >Supprimer</button>
 
                             </div>
                         )

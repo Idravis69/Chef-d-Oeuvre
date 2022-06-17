@@ -18,7 +18,10 @@ function Navlink() {
                                 <a className="nav-link" href="/Tarifs">Tarifs</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#formc">Contact</a>
+                                <a className="nav-link" href="/Acceuil#formc">Contact</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/Inscription">Inscription</a>
                             </li>
                         </ul>
                     </div>

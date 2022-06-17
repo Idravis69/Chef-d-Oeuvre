@@ -29,7 +29,7 @@ export default function View(props) {
                 </div>
                 <div class="right-item">
                     <div class="product-title">
-                        <h1>{inputs.Nom}</h1>
+                        <h1 className="h1view">{inputs.Nom}</h1>
                     </div>
                     <p class="desc"><strong>Description</strong><br/>{inputs.Description}</p>
                     <span class="price">{inputs.Prix}</span>

@@ -302,7 +302,7 @@ h1{
   display: flex;
 }
 
-h1{
+.h1view{
   color: #343434;
   font-weight: 300;
   margin: 0px 0px;
@@ -365,10 +365,11 @@ li {
   align-items: center;
 }
 
-.tarifs{
+.tarifs {
   display: flex;
   justify-content: center;
   text-align: center;
   color: black;
   flex-direction: column;
+  margin-top: 2%;
 }
