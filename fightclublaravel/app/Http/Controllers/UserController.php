@@ -23,6 +23,17 @@ class UserController extends Controller
         return response()->json(['user'=>$request->all()]);
     }
 
+    public function login(Request $request)
+    {
+        $user = User::where('email',$request->email)->first();
+        if($user){
+            if(Hash::check($request->password,$user->password)){
+                return response()->json(['user'=>$user]);
+            }
+        }
+        return response()->json(['error'=>'User not found']);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
