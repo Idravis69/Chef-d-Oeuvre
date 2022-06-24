@@ -25,23 +25,32 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        $user = User::where('email',$request->email)->first();
-        if($user){
-            if(Hash::check($request->password,$user->password)){
-                return response()->json(['user'=>$user]);
+        $user = User::where('email', $request->email)->first();
+        
+        if ($user) {
+            if (Hash::check($request->password, $user->password)) {
+                return response()->json([
+                    'token' => $user->createToken(time())->plainTextToken
+                ]);
+                
+            } else {
+                return response()->json([
+                    'error' => 'Invalid Credentials'
+                ]);
             }
         }
-        return response()->json(['error'=>'User not found']);
-    }
+    
+    } 
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function logout()
     {
-        //
+        auth()->logout();
+        return response()->json(['message'=>'Successfully logged out']);
     }
 
     /**
@@ -97,6 +106,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //  Delete a user  
+        $user = User::find($id);
+        $user->delete();
     }
 }

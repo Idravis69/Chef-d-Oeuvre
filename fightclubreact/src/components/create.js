@@ -13,7 +13,7 @@ export default function Create() {
 
     const submitForm = () =>{
         http.post('/produits',inputs).then((res)=>{
-            navigate('/');
+            navigate('/Boutique');
         })
     }
     return (

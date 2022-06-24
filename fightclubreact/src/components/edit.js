@@ -9,10 +9,10 @@ export default function Edit(props) {
     const {id} = useParams();
 
     useEffect(()=>{
-        fetchUser()
+        FUser()
     },[]);
 
-    const fetchUser= () =>{
+    const FUser= () =>{
         http.get('/produits/'+id+'/edit').then((res)=>{
             setInputs({
                 Nom:res.data.Nom,
@@ -30,7 +30,7 @@ export default function Edit(props) {
 
     const submitForm = () =>{
         http.put('/produits/'+id,inputs).then((res)=>{
-            navigate('/');
+            navigate('/Boutique');
         })
     }
     return (

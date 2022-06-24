@@ -8,24 +8,42 @@ export default function View(props) {
     const { id } = useParams();
 
     useEffect(() => {
-        fetchUser()
+        FUser()
     }, []);
 
-    const fetchUser = () => {
+    const FUser = () => {
         http.get('/produits/' + id + '/edit').then((res) => {
             setInputs({
                 Nom: res.data.Nom,
                 Prix: res.data.Prix,
                 Description: res.data.Description,
-                image: res.data.image
+                Image: res.data.Image
             });
         });
+    }
+
+    const nom = inputs.Nom;
+    const prix = inputs.Prix;
+
+    const addcart = () => {
+        console.log(nom, prix);
+        http.post("/Addcart", {Nom: nom, Prix: prix})
+    }
+
+    let viewcartbtn = "";
+    if (localStorage.getItem("token") != undefined) {
+        viewcartbtn = (
+            <div className="d-flex justify-content-center"><button onClick={addcart} className="btn btn-primary">Ajouter au panier</button></div>
+        )
+        }
+    else {
+        viewcartbtn = "";
     }
     return (
 
             <section class="product-body">
                 <div class="left-item w-25">
-                    <img src={inputs.image} alt="image article"/>
+                    <img src={inputs.Image} alt="image article"/>
                 </div>
                 <div class="right-item">
                     <div class="product-title">
@@ -33,29 +51,8 @@ export default function View(props) {
                     </div>
                     <p class="desc"><strong>Description</strong><br/>{inputs.Description}</p>
                     <span class="price">{inputs.Prix}</span>
-                    <button class="btn btn-primary">Ajouter au panier</button>
+                    {viewcartbtn}
                 </div>
             </section>
-
-        /*<div className="d-flex justify-content-center">
-                        <div class="card">
-                            <img className="d-flex justify-conten-center" src={inputs.image} width="40%" />
-                            <h1 className="d-flex justify-content-start">{inputs.Nom}</h1>
-                            <p className="d-flex justify-content-start">{inputs.Description}</p>
-                            <p class="price">{inputs.Prix}</p>
-                            <form>
-                                <label for="size">Taille</label>
-                                <select id="size">
-                                    <option>L</option>
-                                    <option>M</option>
-                                    <option>S</option>
-                                    <option>XS</option>
-                                    <option>XL</option>
-                                </select>
-                                <button>Ajouter au panier</button>
-                            </form>
-                        </div>
-                    </div>*/
-
     )
 }

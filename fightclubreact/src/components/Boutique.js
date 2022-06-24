@@ -36,7 +36,7 @@ export default function Boutique() {
                             
 
                             <div className='cardsp col-md-3 col-sm-6 d-flex flex-column'>
-                                <img src={user.image} className='w-100 mt-1'></img>
+                                <img src={user.Image} className='w-100 mt-1'></img>
                                 <p className='mt-1'>{user.Nom}</p>
                                 <div className='d-flex mt-1 '>
                                 </div>

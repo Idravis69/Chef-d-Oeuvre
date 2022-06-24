@@ -1,23 +1,24 @@
 import { useState } from "react";
 import http from "../http";
+import { useNavigate } from "react-router-dom";
 
 function Connexion() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigation = useNavigate();
     function Login(){
         http.post('/login', {
             email: email,
             password: password,
         }).then(res => {
-            if(res.status === 200){
-                console.log(res);
-                //window.location.href = '/Acceuil';
-                
-                localStorage.setItem('name', res.data.user.name);
-                console.log("idris");
+
+            if(res.data.token != undefined ){
+                navigation('/Acceuil');
+                localStorage.setItem('token', res.data.token);
+                window.location.reload();
             }
             else{
-                console.log("erreur");
+                alert("erreur");
             }
 
         })
@@ -30,7 +31,7 @@ function Connexion() {
                 <h1>Connexion</h1>
                 <div className="row">
                     <div className="col-md-12 form-group">
-                        <label>email</label>
+                        <label>Email</label>
                         <input type="email" name="email" onChange={(e) => setEmail(e.target.value)} className="form-control"/>
                     </div>
                 </div>

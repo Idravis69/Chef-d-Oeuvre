@@ -12,6 +12,7 @@ import Create from './components/create';
 import Edit from './components/edit';
 import View from './components/view';
 import Inscription from './components/Inscription';
+import Cart from './components/Cart';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/edit/:id' element={<Edit />} />
         <Route path='/view/:id' element={<View />} />
         <Route path='/Inscription' element={<Inscription />} />
+        <Route path='/Cart' element={<Cart />} />
       </Routes>
       <Footer/>
     </div>
