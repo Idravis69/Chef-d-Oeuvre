@@ -19,7 +19,7 @@ function Cart() {
                 return (
                     <div className="card">
                         <div className="card-body">
-                            
+                            <img className="card-img-top w-25" src={item.Image}></img>
                             <h5 className="card-title">{item.Nom}</h5>
                             <p className="card-text">{item.Prix}</p>
                         </div>

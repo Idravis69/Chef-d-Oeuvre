@@ -24,10 +24,11 @@ export default function View(props) {
 
     const nom = inputs.Nom;
     const prix = inputs.Prix;
+    const image = inputs.Image;
 
     const addcart = () => {
         console.log(nom, prix);
-        http.post("/Addcart", {Nom: nom, Prix: prix})
+        http.post("/Addcart", {Nom: nom, Prix: prix, Image: image});
     }
 
     let viewcartbtn = "";

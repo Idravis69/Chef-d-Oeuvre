@@ -12,6 +12,7 @@ class CartController extends Controller
         $cart = new Cart();
         $cart->Nom = $request->Nom;
         $cart->Prix = $request->Prix;
+        $cart->Image = $request->Image;
         $cart->save();
         return response()->json(['cart'=>$request->all()]);
         return response()->json('Ajouter au panier avec succès');
