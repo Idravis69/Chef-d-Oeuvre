@@ -9,7 +9,7 @@ function Localisation() {
         <div className="Localisation d-flex container-fluid">
             <div className="info">
                 <h1 className="titreinfo">Ou nous trouver ?</h1>
-                <p className="texteinfo">Lorem ipsum dolor sit amet, consectetur llamco laboris nisi it esse cillum dolore eu fugiat nul epteur sint occaecat cupidatat non proid orem ipsum dolor sit amet, consectetur llamco laboris nisi it esse cillum dolore eu fugiat nul epteur sint occaecat cupidatat non proid </p>
+                <p className="texteinfo">Nous sommes situés à Neuville-sur-Saône. Rue Adrien Ducrot, 69250. Nous sommes aussi accessibles par TCL via 70,40, 84,96. Au plaisir de vous voir chez nous.</p>
                 <p className="textehoraire">
                     Horaires : <br /><br /> lundi: 06h00-23h00 <br /> mardi 06h00–23h00 <br /> mercredi 06h00–23h00 <br /> jeudi 06h00–23h00 <br /> vendredi: 06h00–23h00 <br /> samedi: 06h00–23h00 <br /> dimanche: 09h00–16h00
                 </p>

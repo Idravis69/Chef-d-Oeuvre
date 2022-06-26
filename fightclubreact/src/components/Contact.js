@@ -4,7 +4,7 @@ function Contact() {
         <div id="formc" className="Contact">
             <hr className="hr mt-5" />
             <div className="txtcontact">
-                <p>Nom Prénom <br /> Responsable Club <br /> 0632543508</p>
+                <p>Nasser Gabsi<br /> Responsable Club <br /> 0632543508</p>
                 <h4 className="mt-5">OU</h4>
             </div>
             <div className="formcontact">

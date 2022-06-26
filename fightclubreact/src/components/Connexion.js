@@ -13,7 +13,7 @@ function Connexion() {
         }).then(res => {
 
             if(res.data.token != undefined ){
-                navigation('/Acceuil');
+                navigation('/Accueil');
                 localStorage.setItem('token', res.data.token);
                 window.location.reload();
             }

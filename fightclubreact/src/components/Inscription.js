@@ -20,7 +20,7 @@ function Register(){
     return (
         <div className="Connexion d-flex">
             <div class="containerconnexion">
-                <h1>Connexion</h1>
+                <h1>Inscription</h1>
                 <div className="row">
                     <div className="col-md-12 form-group">
                         <label>Pseudo</label>

@@ -21,7 +21,7 @@ function App() {
       <Navbar/>
       <Navlink/>
       <Routes>
-        <Route path="/Acceuil" element={<Acceuil/>} />
+        <Route path="/Accueil" element={<Acceuil/>} />
         <Route path="/Connexion" element={<Connexion/>} />
         <Route path="/Tarifs" element={<Tarifs/>} />
         <Route path='/Boutique' element={<Boutique />} />

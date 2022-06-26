@@ -1,11 +1,11 @@
 function Navbar() {
     let Logout = () => {
         localStorage.clear();
-        window.location.href = "/Acceuil";
+        window.location.href = "/Accueil";
         }
     let Log;
     if (localStorage.getItem("token") !== null) {
-        Log = <div class="position-absolute top-50 end-0 translate-middle-y"><a href="/Acceuil" onClick={Logout}>Logout</a></div>
+        Log = <div class="position-absolute top-50 end-0 translate-middle-y"><a href="/Accueil" onClick={Logout}>Logout</a></div>
     }
     else {
         Log = <a href="/Connexion" class="position-absolute top-50 end-0 translate-middle-y" name="deco">Login</a>;
