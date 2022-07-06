@@ -34,7 +34,7 @@ export default function View(props) {
     let viewcartbtn = "";
     if (localStorage.getItem("token") != undefined) {
         viewcartbtn = (
-            <div className="d-flex justify-content-center"><button onClick={addcart} className="btn btn-primary">Ajouter au panier</button></div>
+            <div className="d-flex justify-content-center"><button onClick={addcart} className="btn">Ajouter au panier</button></div>
         )
         }
     else {
@@ -42,16 +42,16 @@ export default function View(props) {
     }
     return (
 
-            <section class="product-body">
-                <div class="left-item w-25">
+            <section className="product-body">
+                <div className="left-item w-25">
                     <img src={inputs.Image} alt="image article"/>
                 </div>
-                <div class="right-item">
-                    <div class="product-title">
+                <div className="right-item">
+                    <div className="product-title">
                         <h1 className="h1view">{inputs.Nom}</h1>
                     </div>
-                    <p class="desc"><strong>Description</strong><br/>{inputs.Description}</p>
-                    <span class="price">{inputs.Prix}</span>
+                    <p className="desc"><strong>Description</strong><br/>{inputs.Description}</p>
+                    <span className="price">{inputs.Prix}</span>
                     {viewcartbtn}
                 </div>
             </section>

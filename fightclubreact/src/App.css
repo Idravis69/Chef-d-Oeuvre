@@ -436,7 +436,7 @@ li {
 }
 
 .cart_img_col img {
-  display: none;
+  /*display: none;*/
 }
 
 .cart_product_col {
@@ -500,7 +500,7 @@ li {
 .cart_img_col {
   width: 15%;
   display: table-cell;
-  background-image: none;
+  /*background-image: none;*/
 }
 
 .cart_img_col img {
@@ -669,4 +669,13 @@ table th {
   table td:last-child {
     border-bottom: 0;
   }
+}
+
+.btn {
+  background-color: #3D0303;
+  color: white;
+}
+
+.btn:hover {
+  color: white;
 }

@@ -14,11 +14,16 @@ function Connexion() {
 
             if(res.data.token != undefined ){
                 navigation('/Accueil');
-                localStorage.setItem('token', res.data.token);
+                localStorage.setItem('token', res.data.token)
                 window.location.reload();
             }
             else{
                 alert("erreur");
+            }
+
+            if(res.data.role == 'admin'){
+                localStorage.setItem('role', res.data.role)
+                window.location.reload();
             }
 
         })
@@ -27,7 +32,7 @@ function Connexion() {
 
     return (
         <div className="Connexion d-flex">
-            <div class="containerconnexion">
+            <div className="containerconnexion">
                 <h1>Connexion</h1>
                 <div className="row">
                     <div className="col-md-12 form-group">

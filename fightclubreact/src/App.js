@@ -25,11 +25,11 @@ function App() {
         <Route path="/Connexion" element={<Connexion/>} />
         <Route path="/Tarifs" element={<Tarifs/>} />
         <Route path='/Boutique' element={<Boutique />} />
-        <Route path='/create' element={<Create />} />
-        <Route path='/edit/:id' element={<Edit />} />
+        <Route path='/create' element={localStorage.getItem('role') ? <Create/> :<Acceuil/>} />
+        <Route path='/edit/:id' element={localStorage.getItem('role') ? <Edit/> :<Acceuil/>} />
         <Route path='/view/:id' element={<View />} />
-        <Route path='/Inscription' element={<Inscription />} />
-        <Route path='/Cart' element={<Cart />} />
+        <Route path='/Inscription' element={localStorage.getItem('role') ? <Inscription/> :<Acceuil/>} />
+        <Route path='/Cart' element={localStorage.getItem('token') ? <Cart/> :<Acceuil/>} />
       </Routes>
       <Footer/>
     </div>

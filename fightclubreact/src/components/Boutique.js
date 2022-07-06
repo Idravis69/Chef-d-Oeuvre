@@ -15,9 +15,6 @@ export default function Boutique() {
         })
     }
 
-
-
-
     const deleteUser = (id) => {
         http.delete('/produits/' + id).then(res => {
             fetchAllUsers();
@@ -33,20 +30,15 @@ export default function Boutique() {
                     {users.map(user => {
                         return (
 
-                            
-
                             <div className='cardsp col-md-3 col-sm-6 d-flex flex-column'>
                                 <img src={user.Image} className='w-100 mt-1'></img>
                                 <p className='mt-1'>{user.Nom}</p>
                                 <div className='d-flex mt-1 '>
                                 </div>
                                 <p className='mt-1'>{user.Prix}</p>
-                                <Link className="btn btn-info" to={{ pathname: "/edit/" + user.id }}>Modifier</Link>&nbsp;
-                                <Link className="btn btn-primary" to={{ pathname: "/view/" + user.id }}>Voir</Link>&nbsp;
-                                <button type="button" className="btn btn-danger"
-                                    onClick={() => { deleteUser(user.id) }}
-                                >Supprimer</button>
-
+                                {localStorage.getItem('role') ? <Link className="btn " to={{ pathname: "/edit/" + user.id }}>Modifier</Link> : ''}
+                                <Link className="btn" to={{ pathname: "/view/" + user.id }}>Voir</Link>
+                                {localStorage.getItem('role') ? <button onClick={() => deleteUser(user.id)} className="btn">Supprimer</button> : ''}
                             </div>
                         )
                     })

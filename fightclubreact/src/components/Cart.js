@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import http from "../http";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
-
+    const navigation = useNavigate();
     const [cart, setCart] = useState([]);
+
+    
     useEffect(() => {
         http.get("/Cart").then(res => {
             setCart(res.data);
@@ -12,35 +15,41 @@ function Cart() {
         );
     }, []);
 
+    const btnmessage = () => {
+        alert("Votre commande a été prise en compte");
+        navigation('/Accueil');
+    }
+
 
     return (
         <div className="Cart">
             <h1> Panier </h1>
-            <button className="btncontact"> Valider Commande</button>
+            
+            <button className="btncontact" onClick={btnmessage}>Valider Commande</button>
             {cart.map(item => {
                 return (
-                    <div class="page">
+                    <div className="page">
                         <div id="store_cart">
 
-                            <ul class="cart_item">
+                            <ul className="cart_item">
 
-                                <li class="cart_img_col">
+                                <li className="cart_img_col">
                                     <img src={item.Image}/>
                                 </li>
 
-                                <li class="cart_product_col">
+                                <li className="cart_product_col">
                                     <p>{item.Nom}</p>
                                 </li>
 
-                                <li class="cart_options_col">
+                                <li className="cart_options_col">
                                     <span>Quantity: </span>
                                     <input type="number" min="1"/>
                                 </li>
 
-                                <li class="cart_price_col">
+                                <li className="cart_price_col">
                                     <h2>{item.Prix}</h2>
                                 </li>
-                                <li class="cart_del_col">
+                                <li className="cart_del_col">
                                     <img src="https://i.imgur.com/bI4oD5C.png"/>
                                 </li>
                             </ul>

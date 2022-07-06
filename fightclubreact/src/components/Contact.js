@@ -1,4 +1,6 @@
 function Contact() {
+    
+
 
     return (
         <div id="formc" className="Contact">
@@ -7,6 +9,8 @@ function Contact() {
                 <p>Nasser Gabsi<br /> Responsable Club <br /> 0632543508</p>
                 <h4 className="mt-5">OU</h4>
             </div>
+
+             <p className="txtcontact"> Le formulaire est en cours de maintenance merci de ne pas l'utiliser.</p>
             <div className="formcontact">
                 <form className="form mt-5">
                     <div className="row g-3">
@@ -29,9 +33,9 @@ function Contact() {
                             <input type="numero" className="form-control mt-1" id="inputNumero"></input>
                         </div>
                     </div>
-                    <div class="row g-3 mt-1">
+                    <div className="row g-3 mt-1">
                         <label>Demandes</label>
-                        <textarea class="form-control" id="demande"></textarea>
+                        <textarea className="form-control" id="demande"></textarea>
                     </div>
                     <button type="submit" className="btncontact">Envoyez</button>
                 </form>

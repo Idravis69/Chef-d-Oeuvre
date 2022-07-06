@@ -19,6 +19,7 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
+        $user->role = 'user';
         $user->save();
         return response()->json(['user'=>$request->all()]);
     }
@@ -30,7 +31,8 @@ class UserController extends Controller
         if ($user) {
             if (Hash::check($request->password, $user->password)) {
                 return response()->json([
-                    'token' => $user->createToken(time())->plainTextToken
+                    'token' => $user->createToken(time())->plainTextToken,
+                    'role' => $user->role,
                 ]);
                 
             } else {

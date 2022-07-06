@@ -46,7 +46,7 @@ export default function Create() {
                             onChange={handleChange}
                         />
 
-                        <button type="button" onClick={submitForm} className="btn btn-info mt-2">Crée</button>
+                        <button type="button" onClick={submitForm} className="btn mt-2">Crée</button>
                     </div>
                 </div>
             </div>

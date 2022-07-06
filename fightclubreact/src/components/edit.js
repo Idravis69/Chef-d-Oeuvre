@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import http from '../http'
 
 
-export default function Edit(props) {
+export default function Edit() {
     const navigate = useNavigate();
     const [inputs,setInputs] = useState({});
     const {id} = useParams();
@@ -64,7 +64,7 @@ export default function Edit(props) {
                         />
 
 
-                        <button type="button" onClick={submitForm} className="btn btn-info mt-2">Update</button>
+                        <button type="button" onClick={submitForm} className="btn mt-2">Update</button>
                     </div>
                 </div>
             </div>
